@@ -142,7 +142,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>💸이더리움 로또💸</title>
+        <title>Ether Lottery</title>
         <meta name="description" content="An Ethereum Lottery dApp" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -154,7 +154,7 @@ export default function Home() {
               <h1>Ether Lottery</h1>
             </div>
             <div className="navbar-end">
-              <button onClick={connectWalletHandler} className="button is-link"지갑 연결하기🔒</button>
+              <button onClick={connectWalletHandler} className="button is-link">Connect Wallet</button>
             </div>
           </div>
         </nav>
@@ -163,16 +163,16 @@ export default function Home() {
             <div className="columns">
               <div className="column is-two-thirds">
                 <section className="mt-5">
-                  <p> 0.01 이더 지불해서 참여하기</p>
-                  <button onClick={enterLotteryHandler} className="button is-link is-large is-light mt-3">참여하기😄</button>
+                  <p>Enter the lottery by sending 0.01 Ether</p>
+                  <button onClick={enterLotteryHandler} className="button is-link is-large is-light mt-3">Play now</button>
                 </section>
                 <section className="mt-6">
-                  <p><b>관리자만 가능:</b> Pick winner</p>
-                  <button onClick={pickWinnerHandler} className="button is-primary is-large is-light mt-3">승자 추첨하기🙏</button>
+                  <p><b>Admin only:</b> Pick winner</p>
+                  <button onClick={pickWinnerHandler} className="button is-primary is-large is-light mt-3">Pick Winner</button>
                 </section>
                 <section className="mt-6">
-                  <p><b>관리자만 가능:</b> Pay winner</p>
-                  <button onClick={payWinnerHandler} className="button is-success is-large is-light mt-3">승자에게 상금 보내기💰</button>
+                  <p><b>Admin only:</b> Pay winner</p>
+                  <button onClick={payWinnerHandler} className="button is-success is-large is-light mt-3">Pay Winner</button>
                 </section>
                 <section>
                   <div className="container has-text-danger mt-6">
@@ -190,7 +190,7 @@ export default function Home() {
                   <div className="card">
                     <div className="card-content">
                       <div className="content">
-                        <h2>로또 승자 목록💲</h2>
+                        <h2>Lottery History</h2>
                         {
                           (lotteryHistory && lotteryHistory.length > 0) && lotteryHistory.map(item => {
                             if (lotteryId != item.id) {
@@ -213,7 +213,7 @@ export default function Home() {
                   <div className="card">
                     <div className="card-content">
                       <div className="content">
-                        <h2>참여자😆({lotteryPlayers.length})</h2>
+                        <h2>Players ({lotteryPlayers.length})</h2>
                         <ul className="ml-0">
                           {
                             (lotteryPlayers && lotteryPlayers.length > 0) && lotteryPlayers.map((player, index) => {
@@ -233,8 +233,8 @@ export default function Home() {
                   <div className="card">
                     <div className="card-content">
                       <div className="content">
-                        <h2>총 상금💵</h2>
-                        <p>{lotteryPot} 이더</p>
+                        <h2>Pot</h2>
+                        <p>{lotteryPot} Ether</p>
                       </div>
                     </div>
                   </div>
