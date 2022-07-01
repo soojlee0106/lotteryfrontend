@@ -190,7 +190,7 @@ export default function Home() {
                   <div className="card">
                     <div className="card-content">
                       <div className="content">
-                        <h2>Lottery History</h2>
+                        <h2>로또 승자 목록</h2>
                         {
                           (lotteryHistory && lotteryHistory.length > 0) && lotteryHistory.map(item => {
                             if (lotteryId != item.id) {
