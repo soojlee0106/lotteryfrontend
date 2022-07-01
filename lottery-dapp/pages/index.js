@@ -151,7 +151,7 @@ export default function Home() {
         <nav className="navbar mt-4 mb-4">
           <div className="container">
             <div className="navbar-brand">
-              <h1>Ether Lottery</h1>
+              <h1>이더리움 로또</h1>
             </div>
             <div className="navbar-end">
               <button onClick={connectWalletHandler} className="button is-link">지갑 연결하기</button>
